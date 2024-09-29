@@ -1,6 +1,6 @@
-# Rutube Техподдержка 
+# Разработка от команды Invexion для Rutube Техподдержки 
 
-Микросервисная система, позволяющая эффективно обрабатывать запросы от пользователей
+Мы представляем микросервисную система, позволяющую эффективно обрабатывать запросы от пользователей.
 
 ## Требования
 
@@ -23,10 +23,11 @@
 
 ### Model
 
-- TODO ML
+- sentence_transformers
 - torch
 - FastApi
 - ChormaDB
+- hugging-face
 
 ### Telegram Bot
 
@@ -34,7 +35,7 @@
 
 ### Инфрастукрутные контейнеры
 - Prometheus - База данных временных рядов для метрик
-- Grafana - визуализатор метрик
+- Grafana - Визуализатор метрик
 - PostgreSQL - Реляционная БД для хранения 
 
 ## Запуск с Docker compose
@@ -48,12 +49,17 @@ git clone https://github.com/KLINY1337/rutube-intelligent-help-desk-assistant.gi
 ```
 BOT_TOKEN=123123123123123123
 ```
-3. Скопируйте файл по пути `rutube-intelligent-assistant/ml`
+3. Создайте `.env` файл для указания параметров ml-сервиса:
+```
+CHROMA_DB=...
+RUTUBE_DOCUMENTS_PATH=...
+```
+4. Скопируйте файл по пути `rutube-intelligent-assistant/ml`
 
 ```shell
 cp .env rutube-intelligent-assistant/ml/.env
 ```
-4. Запустите сборку проекта
+5. Запустите сборку проекта
 ```shell
 docker compose up --build
 ```
