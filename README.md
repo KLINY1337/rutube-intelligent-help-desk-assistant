@@ -41,12 +41,12 @@
 
 1. Склонируйте репозиторий
 ```shell
-git clone  https://github.com/lyaminartemiy/rutube-intelligent-assistant.git
+git clone https://github.com/KLINY1337/rutube-intelligent-help-desk-assistant.git
 ```
 
 2. Создайте `.env` файл для указания токена телеграм-бота:
 ```
-TG_TOKEN=123123123123123123
+BOT_TOKEN=123123123123123123
 ```
 3. Скопируйте файл по пути `rutube-intelligent-assistant/ml`
 
